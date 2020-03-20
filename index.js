@@ -77,7 +77,7 @@ app.post('/private', passport.authenticate('jwt', { session: false }), (req, res
 app.post('/login', urlEncodedParser, (req, res) => {
     res.json({})
     const email = req.body.email
-    const password = res.body.password
+    const password = req.body.password
 
     const query = {
         email,
