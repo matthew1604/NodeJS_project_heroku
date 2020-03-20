@@ -70,7 +70,7 @@ app.get('/signin', (req, res) => {
     res.json({})
 })
 
-app.get('/private', passport.authenticate('jwt', { session: false }), (req, res) => {
+app.post('/private', passport.authenticate('jwt', { session: false }), (req, res) => {
     res.json(req.user.profile)
 })
 
