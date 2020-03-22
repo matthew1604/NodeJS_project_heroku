@@ -105,7 +105,7 @@ app.post('/remove-article', urlEncodedParser, (req, res) => {
 })
 
 app.post('/update-article', urlEncodedParser, (req, res) => {
-    const id = req.body.title
+    const id = req.body.id
     const title = req.body.title
     const body = req.body.body
     const author_id = req.body.author_id
